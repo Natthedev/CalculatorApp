@@ -451,7 +451,7 @@ h1 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 90px;
+  width: 95px;
   height: 34px;
   
 }
@@ -474,6 +474,7 @@ h1 {
   background-color: hsl(223, 31%, 20%);
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 34px;
 }
 
 .slider:before {
@@ -484,16 +485,10 @@ h1 {
   left: 6px;
   bottom: 4px;
   background-color: hsl(6, 63%, 50%);
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
-input:checked + .slider {
-  background-color:  hsl(0, 5%, 81%);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+input:active + .slider {
+    background-color:  hsl(224, 11%, 81%);
 }
 
 input:checked + .slider:before {
@@ -501,6 +496,7 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
 
 /* Rounded sliders */
 .slider.round {
@@ -514,17 +510,18 @@ input:checked + .slider:before {
 
 
 
+
 </style>
 <body>
    <div class="desktopscreen">
     <div class="theme1">
     <div class="calcholder">
-        <div class="themetoggle">
-                <label class="switch">
-                    <input type="checkbox" unchecked>
-                    <span class="slider round"></span>
-                  </label> 
-        </div>           
+       <div class="themetoggle">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+       </div> 
         <div class="screen"></div>
         <div class="keyholder">
             <!--COL 1-->
@@ -556,7 +553,7 @@ input:checked + .slider:before {
    </div>
 
 <!-- THEME 2 -->
-   <div class="theme2">
+   <div class="theme2" id="theme2">
     <div class="calcholder2">
     <div class="screen2"></div>
     <div class="keyholder2">
@@ -588,7 +585,7 @@ input:checked + .slider:before {
     </div>
    </div> 
 <!-- THEME 3 -->
-<div class="theme3">
+<div class="theme3" id="theme3">
     <div class="calcholder3">
     <div class="screen3"></div>
     <div class="keyholder3">
@@ -621,7 +618,7 @@ input:checked + .slider:before {
    </div> 
 </div> 
    <script>
-let themetoggle = document.getElementsByClassName('.switch')[0]
+
 
    </script>
 </body>
