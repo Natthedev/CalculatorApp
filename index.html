@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalculatorApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <style>
-    /* Holders (containers) */
-.desktopscreen{
-    display: flex;
-    flex-direction: column;
-    width: 1440px;
-    height: 1024px;
-    background: #FFF;
-    box-sizing: border-box
-        
+
+    /*Toggle styling*/
+    .desktoplayer body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.5s;
+        flex-direction: column;
     }
-   /* THEME 1*/ 
-.theme1 {
-    .calcholder {
+
+
+    .theme1 .calcholder {
         display: flex;
         flex-direction: column;
         width: 1283px;
@@ -30,140 +32,141 @@
         background: #33446C;
         justify-content: center;
         align-items: center;
+        z-index: auto;
     }
 
-  
-.screen{
-    width: 647px;
-    height: 153px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background: #182034;
-    margin-bottom: 24px;
-    margin-top: 35px;
-}
-.keyholder{
-    display: grid;
-    grid-template-columns: repeat(4, 116px);
-    grid-template-rows: repeat(4, 67px) 1fr;
-    width: 650px;
-    height: 470px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background: #232C43;
-    column-gap: 20px;
-    row-gap: 20px;
-    justify-content: center;
-    justify-items: center;
-    padding: 4px;
     
-}
+    .theme1 .screen{
+        width: 647px;
+        height: 153px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background: #182034;
+        margin-bottom: 24px;
+        margin-top: 35px;
+    }
+    .theme1 .keyholder{
+        display: grid;
+        grid-template-columns: repeat(4, 116px);
+        grid-template-rows: repeat(4, 67px) 1fr;
+        width: 650px;
+        height: 470px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background: #232C43;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        padding: 4px;
+        
+    }
 
-/* Keys*/
-.greykeys{
-    width: 116px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: #D9D9D9;
-    box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.deletekey{
-    width: 117px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: #637097;
-    box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey{
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #637097;
-    box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
-    backdrop-filter: blur(2px);
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-top: auto;
-    padding: 2px;
-    align-content: center;
+    /* Keys*/
+    .theme1 .greykeys{
+        width: 116px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #D9D9D9;
+        box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme1 .deletekey{
+        width: 117px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #637097;
+        box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme1 .resetkey{
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #637097;
+        box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
+        backdrop-filter: blur(2px);
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-top: auto;
+        padding: 2px;
+        align-content: center;
 
-}
-.equalskey {
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: linear-gradient(0deg, rgba(234, 227, 220, 0.06) 0%, rgba(234, 227, 220, 0.06) 100%), #D03F2F;
-    box-shadow: 0px 4px 4px 0px rgba(180, 165, 151, 0.25), 4px 4px 4px 0px rgba(147, 38, 26, 0.65);
-    backdrop-filter: blur(2px);    
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 25px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey,
-.equalskey {
-  grid-column: span 2; /* Spanning across 2 columns */
-  row-gap: 20px;
-  column-gap: 20px;
-}
-/* TextKeys*/
-h2 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color: hsl(221, 14%, 31%);
-    justify-content: center;
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-h3 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal; 
-}
-/* Heading and toggle labels*/
-h1 {
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;   
-}
-}
-/* THEME 2 */
-.theme2 {
-    .calcholder2 {
+    }
+    .theme1 .equalskey {
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: linear-gradient(0deg, rgba(234, 227, 220, 0.06) 0%, rgba(234, 227, 220, 0.06) 100%), #D03F2F;
+        box-shadow: 0px 4px 4px 0px rgba(180, 165, 151, 0.25), 4px 4px 4px 0px rgba(147, 38, 26, 0.65);
+        backdrop-filter: blur(2px);    
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: 25px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme1 .resetkey,
+    .theme1 .equalskey {
+        grid-column: span 2; /* Spanning across 2 columns */
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    /* TextKeys*/
+    .theme1 h2 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(221, 14%, 31%);
+        justify-content: center;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .theme1 h3 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal; 
+    }
+    /* Heading and toggle labels*/
+    .theme1 h1 {
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;   
+    } 
+
+
+
+    .theme2 .calcholder2 {
         display: flex;
         flex-direction: column;
         width: 1283px;
@@ -172,140 +175,138 @@ h1 {
         background: hsl(0, 0%, 90%);
         justify-content: center;
         align-items: center;
+        z-index: auto;
     }
 
-  
-.screen2{
-    width: 647px;
-    height: 153px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background:  hsl(0, 0%, 93%);
-    margin-bottom: 24px;
-    margin-top: 35px;
-}
-.keyholder2{
-    display: grid;
-    grid-template-columns: repeat(4, 116px);
-    grid-template-rows: repeat(4, 67px) 1fr;
-    width: 650px;
-    height: 470px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background: hsl(0, 5%, 81%);
-    column-gap: 20px;
-    row-gap: 20px;
-    justify-content: center;
-    justify-items: center;
-    padding: 4px;
     
-}
-.offwhitekeys {
-    width: 116px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: hsl(45, 7%, 89%);
-    box-shadow: 4px 4px 4px 0px  hsl(35, 11%, 61%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.deletekey2 {
-    width: 117px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: hsl(185, 42%, 37%);
-    box-shadow: 4px 4px 4px 0px hsl(185, 58%, 25%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey2 {
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: hsl(185, 42%, 37%);
-    box-shadow: 4px 4px 4px 0px hsl(185, 58%, 25%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-top: auto;
-    padding: 2px;
-    align-content: center;
+    .theme2 .screen2 {
+        width: 647px;
+        height: 153px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background:  hsl(0, 0%, 93%);
+        margin-bottom: 24px;
+        margin-top: 35px;
+    }
+    .theme2 .keyholder2{
+        display: grid;
+        grid-template-columns: repeat(4, 116px);
+        grid-template-rows: repeat(4, 67px) 1fr;
+        width: 650px;
+        height: 470px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background: hsl(0, 5%, 81%);
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        padding: 4px;
+        
+    }
+    .theme2 .offwhitekeys {
+        width: 116px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: hsl(45, 7%, 89%);
+        box-shadow: 4px 4px 4px 0px  hsl(35, 11%, 61%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme2 .deletekey2 {
+        width: 117px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: hsl(185, 42%, 37%);
+        box-shadow: 4px 4px 4px 0px hsl(185, 58%, 25%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme2 .resetkey2 {
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: hsl(185, 42%, 37%);
+        box-shadow: 4px 4px 4px 0px hsl(185, 58%, 25%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-top: auto;
+        padding: 2px;
+        align-content: center;
 
-}
-.equalskey2 {
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background:  hsl(25, 98%, 40%);
-    box-shadow: 0px 4px 4px 0px  hsl(25, 99%, 27%);
-    backdrop-filter: blur(2px);    
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 25px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey2,
-.equalskey2 {
-  grid-column: span 2; /* Spanning across 2 columns */
-  row-gap: 20px;
-  column-gap: 20px;
-}
-h2 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color: hsl(60, 10%, 19%);
-    justify-content: center;
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-h3 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal; 
-}
-/* Heading and toggle labels*/
-h1 {
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    font-weight: 700;
-    color: hsl(60, 10%, 19%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;   
-}
+    }
+    .theme2 .equalskey2 {
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background:  hsl(25, 98%, 40%);
+        box-shadow: 0px 4px 4px 0px  hsl(25, 99%, 27%);
+        backdrop-filter: blur(2px);    
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: 25px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme2 .resetkey2,
+    .theme2 .equalskey2 {
+        grid-column: span 2; /* Spanning across 2 columns */
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .theme2 h2 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(60, 10%, 19%);
+        justify-content: center;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .theme2 h3 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal; 
+    }
+    /* Heading and toggle labels*/
+    .theme2 h1 {
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 700;
+        color: hsl(60, 10%, 19%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;   
+    }
 
 
-}
 
-/* THEME 3 */
-.theme3 {
-    .calcholder3 {
+    .theme3 .calcholder3 {
         display: flex;
         flex-direction: column;
         width: 1283px;
@@ -314,323 +315,287 @@ h1 {
         background:hsl(268, 75%, 9%);
         justify-content: center;
         align-items: center;
+        z-index: auto;
+    }   
+    .theme3 .screen3 {
+        width: 647px;
+        height: 153px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background:  hsl(268, 71%, 12%);
+        margin-bottom: 24px;
+        margin-top: 35px;
+    }
+    .theme3 .keyholder3 {
+        display: grid;
+        grid-template-columns: repeat(4, 116px);
+        grid-template-rows: repeat(4, 67px) 1fr;
+        width: 650px;
+        height: 470px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background: hsl(268, 71%, 12%);
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        padding: 4px;
+        
+    }
+    .theme3 .violetkeys {
+        width: 116px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: hsl(268, 47%, 21%);
+        box-shadow: 4px 4px 4px 0px hsl(290, 70%, 36%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme3 .deletekey3 {
+        width: 117px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background:  hsl(281, 89%, 26%);
+        box-shadow: 4px 4px 4px 0px hsl(285, 91%, 52%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 16px;
+        margin-top: 30px;
+        margin-left: 66px;
+        margin-right: 66px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme3 .resetkey3 {
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: hsl(281, 89%, 26%);
+        box-shadow: 4px 4px 4px 0px  hsl(285, 91%, 52%);
+        backdrop-filter: blur(2px);
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-top: auto;
+        padding: 2px;
+        align-content: center;
+
+    }
+    .theme3 .equalskey3 {
+        width: 252px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background:   hsl(176, 100%, 44%);
+        box-shadow: 0px 4px 4px 0px   hsl(177, 92%, 70%);
+        backdrop-filter: blur(2px);    
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: 25px;
+        padding: 2px;
+        align-content: center;
+    }
+    .theme3 .resetkey3,
+    .theme3 .equalskey3 {
+        grid-column: span 2; /* Spanning across 2 columns */
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .theme3 h2 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color:  hsl(52, 100%, 62%);
+        justify-content: center;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .theme3 h3 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal; 
+    }
+    /* Equals key*/
+    .theme3 h1 {
+        display: flex;
+        flex-direction: row;
+        font-size: 32px;
+        font-weight: 700;
+        color:  hsl(198, 20%, 13%);
+        justify-content: center; 
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;   
+    }
+    .calcholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hide all themes */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+
+    /* Set opacity and z-index based on theme */
+    .theme1 .calcholder.theme1,
+    .theme2 .calcholder.theme2,
+    .theme3 .calcholder.theme3 {
+        opacity: 1; /* Show the selected theme */
+        z-index: 3; /* Ensure it's on top of other themes */
+    }
+    .desktoplayer{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 1440px;
+    }
+</style>
+
+<body>
+    <div class="desktoplayer">
+        <div class="tri-state-toggle" style="z-index: 3;">
+            <input class="button" type="radio" name="toggle" id="toggle-one" />
+            <input class="button" type="radio" name="toggle" id="toggle-two" />
+            <input class="button" type="radio" name="toggle" id="toggle-three" />
+        </div>
+            <div class="theme1 calcholder" id="theme-one" style="z-index: 1;">
+                <div class="theme1 screen"></div>
+                    <div class="theme1 keyholder">
+                        <!--COL 1-->
+                        <div class="theme1 greykeys"><h2>7</h2></div>
+                        <div class="theme1 greykeys"><h2>8</h2></div>
+                        <div class="theme1 greykeys"><h2>9</h2></div>
+                        <div class="theme1 deletekey"><h3>DEL</h3></div>
+                        <!--theme1 COL 2-->
+                        <div class="theme1 greykeys"><h2>4</h2></div>
+                        <div class="theme1 greykeys"><h2>5</h2></div>
+                        <div class="theme1 greykeys"><h2>6</h2></div>
+                        <div class="theme1 greykeys"><h2> + </h2></div>
+                        <!--theme1 COL 3-->
+                        <div class="theme1 greykeys"><h2>1</h2></div>
+                        <div class="theme1 greykeys"><h2>2</h2></div>
+                        <div class="theme1 greykeys"><h2>3</h2></div>
+                        <div class="theme1 greykeys"><h2> - </h2></div>
+                        <!--theme1 COL 4-->
+                        <div class="theme1 greykeys"><h2>.</h2></div>
+                        <div class="theme1 greykeys"><h2>0</h2></div>
+                        <div class="theme1 greykeys"><h2>/</h2></div>
+                        <div class="theme1 greykeys"><h2> x </h2></div>
+
+                        <!-- Long Keys -->
+                        <div class="theme1 resetkey"><h3>RESET</h3></div>
+                        <div class="theme1 equalskey"><h3>=</h3></div>
+                    </div>                    
+            </div>
+
+            <div class="theme2 calcholder2" id="theme-two" style="z-index: 0;">
+                    <div class="theme2 screen2"></div>
+                        <div class="theme2 keyholder2">
+                            <!--COL 1-->
+                            <div class="theme2 offwhitekeys"><h2>7</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>8</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>9</h2></div>
+                            <div class="theme2 deletekey2"><h3>DEL</h3></div>
+                            <!--COL 2-->
+                            <div class="theme2 offwhitekeys"><h2>4</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>5</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>6</h2></div>
+                            <div class="theme2 offwhitekeys"><h2> + </h2></div>
+                            <!--COL 3-->
+                            <div class="theme2 offwhitekeys"><h2>1</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>2</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>3</h2></div>
+                            <div class="theme2 offwhitekeys"><h2> - </h2></div>
+                            <!--COL 4-->
+                            <div class="theme2 offwhitekeys"><h2>.</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>0</h2></div>
+                            <div class="theme2 offwhitekeys"><h2>/</h2></div>
+                            <div class="theme2 offwhitekeys"><h2> x </h2></div>
+                
+                            <!-- Long Keys -->
+                            <div class="theme2 resetkey2"><h3>RESET</h3></div>
+                            <div class="theme2 equalskey2"><h3>=</h3></div>
+                                                
+                        </div>                  
+            </div>
+            
+            <div class="theme3 calcholder3" id="theme-three" style="z-index: -1;">
+                    <div class="theme3 screen3"></div>
+                        <div class="theme3 keyholder3">
+                            <!--COL 1-->
+                            <div class="theme3 violetkeys"><h2>7</h2></div>
+                            <div class="theme3 violetkeys"><h2>8</h2></div>
+                            <div class="theme3 violetkeys"><h2>9</h2></div>
+                            <div class="theme3 deletekey3"><h3>DEL</h3></div>
+                            <!--COL 2--> 
+                            <div class="theme3 violetkeys"><h2>4</h2></div>
+                            <div class="theme3 violetkeys"><h2>5</h2></div>
+                            <div class="theme3 violetkeys"><h2>6</h2></div>
+                            <div class="theme3 violetkeys"><h2> + </h2></div>
+                            <!--COL 3-->
+                            <div class="theme3 violetkeys"><h2>1</h2></div>
+                            <div class="theme3 violetkeys"><h2>2</h2></div>
+                            <div class="theme3 violetkeys"><h2>3</h2></div>
+                            <div class="theme3 violetkeys"><h2> - </h2></div>
+                            <!--COL 4-->
+                            <div class="theme3 violetkeys"><h2>.</h2></div>
+                            <div class="theme3 violetkeys"><h2>0</h2></div>
+                            <div class="theme3 violetkeys"><h2>/</h2></div>
+                            <div class="theme3 violetkeys"><h2> x </h2></div>
+                
+                            <!-- Long Keys -->
+                            <div class="theme3 resetkey3"><h3>RESET</h3></div>
+                            <div class="theme3 equalskey3"><h1>=</h1></div>
+                                    
+                        </div>     
+            </div>
+    </div>        
+
+<script>
+    var inputs = document.querySelectorAll(".tri-state-toggle input");
+    var themes = ['theme1', 'theme2', 'theme3'];
+    var currentThemeIndex = 0;
+
+    function handleInputChange() {
+        // Remove all theme classes from the body
+        document.body.classList.remove(...themes);
+
+        // Get the index of the checked input
+        var index = Array.from(inputs).findIndex(input => input.checked);
+
+        // If no input is checked, set index to 0
+        if (index === -1)  index = 0;
+
+        // Update current theme index
+        currentThemeIndex = index;
+
+        // Add theme class based on index
+        document.body.classList.add(themes[index]);
     }
 
-  
-.screen3 {
-    width: 647px;
-    height: 153px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background:  hsl(268, 71%, 12%);
-    margin-bottom: 24px;
-    margin-top: 35px;
-}
-.keyholder3 {
-    display: grid;
-    grid-template-columns: repeat(4, 116px);
-    grid-template-rows: repeat(4, 67px) 1fr;
-    width: 650px;
-    height: 470px;
-    flex-shrink: 0;
-    border-radius: 14px;
-    background: hsl(268, 71%, 12%);
-    column-gap: 20px;
-    row-gap: 20px;
-    justify-content: center;
-    justify-items: center;
-    padding: 4px;
-    
-}
-.violetkeys {
-    width: 116px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background: hsl(268, 47%, 21%);
-    box-shadow: 4px 4px 4px 0px hsl(290, 70%, 36%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.deletekey3 {
-    width: 117px;
-    height: 67px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    background:  hsl(281, 89%, 26%);
-    box-shadow: 4px 4px 4px 0px hsl(285, 91%, 52%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 16px;
-    margin-top: 30px;
-    margin-left: 66px;
-    margin-right: 66px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey3 {
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: hsl(281, 89%, 26%);
-    box-shadow: 4px 4px 4px 0px  hsl(285, 91%, 52%);
-    backdrop-filter: blur(2px);
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-top: auto;
-    padding: 2px;
-    align-content: center;
+    // Add event listeners to each input
+    inputs.forEach(function (input) {
+        input.addEventListener("click", handleInputChange);
+    });
 
-}
-.equalskey3 {
-    width: 252px;
-    height: 68px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background:   hsl(176, 100%, 44%);
-    box-shadow: 0px 4px 4px 0px   hsl(177, 92%, 70%);
-    backdrop-filter: blur(2px);    
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 25px;
-    padding: 2px;
-    align-content: center;
-}
-.resetkey3,
-.equalskey3 {
-  grid-column: span 2; /* Spanning across 2 columns */
-  row-gap: 20px;
-  column-gap: 20px;
-}
-h2 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color:  hsl(52, 100%, 62%);
-    justify-content: center;
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-h3 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color: hsl(0, 0%, 100%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal; 
-}
-/* Equals key*/
-h1 {
-    display: flex;
-    flex-direction: row;
-    font-size: 32px;
-    font-weight: 700;
-    color:  hsl(198, 20%, 13%);
-    justify-content: center; 
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;   
-}
-} 
-/* Toggle switch styling */
-.themetoggle {
-    position: absolute;
-    top: 55px;
-    right: 950px;   
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 95px;
-  height: 34px;
-  
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: hsl(223, 31%, 20%);
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 6px;
-  bottom: 4px;
-  background-color: hsl(6, 63%, 50%);
-}
-
-input:active + .slider {
-    background-color:  hsl(224, 11%, 81%);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
-
-
-
-</style>
-<body>
-   <div class="desktopscreen">
-    <div class="theme1">
-    <div class="calcholder">
-       <div class="themetoggle">
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
-       </div> 
-        <div class="screen"></div>
-        <div class="keyholder">
-            <!--COL 1-->
-            <div class="greykeys"><h2>7</h2></div>
-            <div class="greykeys"><h2>8</h2></div>
-            <div class="greykeys"><h2>9</h2></div>
-            <div class="deletekey"><h3>DEL</h3></div>
-            <!--COL 2-->
-            <div class="greykeys"><h2>4</h2></div>
-            <div class="greykeys"><h2>5</h2></div>
-            <div class="greykeys"><h2>6</h2></div>
-            <div class="greykeys"><h2> + </h2></div>
-            <!--COL 3-->
-            <div class="greykeys"><h2>1</h2></div>
-            <div class="greykeys"><h2>2</h2></div>
-            <div class="greykeys"><h2>3</h2></div>
-            <div class="greykeys"><h2> - </h2></div>
-            <!--COL 4-->
-            <div class="greykeys"><h2>.</h2></div>
-            <div class="greykeys"><h2>0</h2></div>
-            <div class="greykeys"><h2>/</h2></div>
-            <div class="greykeys"><h2> x </h2></div>
-
-            <!-- Long Keys -->
-            <div class="resetkey"><h3>RESET</h3></div>
-            <div class="equalskey"><h3>=</h3></div>
-        </div>
-    </div>
-   </div>
-
-<!-- THEME 2 -->
-   <div class="theme2" id="theme2">
-    <div class="calcholder2">
-    <div class="screen2"></div>
-    <div class="keyholder2">
-                    <!--COL 1-->
-                    <div class="offwhitekeys"><h2>7</h2></div>
-                    <div class="offwhitekeys"><h2>8</h2></div>
-                    <div class="offwhitekeys"><h2>9</h2></div>
-                    <div class="deletekey2"><h3>DEL</h3></div>
-                    <!--COL 2-->
-                    <div class="offwhitekeys"><h2>4</h2></div>
-                    <div class="offwhitekeys"><h2>5</h2></div>
-                    <div class="offwhitekeys"><h2>6</h2></div>
-                    <div class="offwhitekeys"><h2> + </h2></div>
-                    <!--COL 3-->
-                    <div class="offwhitekeys"><h2>1</h2></div>
-                    <div class="offwhitekeys"><h2>2</h2></div>
-                    <div class="offwhitekeys"><h2>3</h2></div>
-                    <div class="offwhitekeys"><h2> - </h2></div>
-                    <!--COL 4-->
-                    <div class="offwhitekeys"><h2>.</h2></div>
-                    <div class="offwhitekeys"><h2>0</h2></div>
-                    <div class="offwhitekeys"><h2>/</h2></div>
-                    <div class="offwhitekeys"><h2> x </h2></div>
-        
-                    <!-- Long Keys -->
-                    <div class="resetkey2"><h3>RESET</h3></div>
-                    <div class="equalskey2"><h3>=</h3></div>                            
-    </div>
-    </div>
-   </div> 
-<!-- THEME 3 -->
-<div class="theme3" id="theme3">
-    <div class="calcholder3">
-    <div class="screen3"></div>
-    <div class="keyholder3">
-                    <!--COL 1-->
-                    <div class="violetkeys"><h2>7</h2></div>
-                    <div class="violetkeys"><h2>8</h2></div>
-                    <div class="violetkeys"><h2>9</h2></div>
-                    <div class="deletekey3"><h3>DEL</h3></div>
-                    <!--COL 2-->
-                    <div class="violetkeys"><h2>4</h2></div>
-                    <div class="violetkeys"><h2>5</h2></div>
-                    <div class="violetkeys"><h2>6</h2></div>
-                    <div class="violetkeys"><h2> + </h2></div>
-                    <!--COL 3-->
-                    <div class="violetkeys"><h2>1</h2></div>
-                    <div class="violetkeys"><h2>2</h2></div>
-                    <div class="violetkeys"><h2>3</h2></div>
-                    <div class="violetkeys"><h2> - </h2></div>
-                    <!--COL 4-->
-                    <div class="violetkeys"><h2>.</h2></div>
-                    <div class="violetkeys"><h2>0</h2></div>
-                    <div class="violetkeys"><h2>/</h2></div>
-                    <div class="violetkeys"><h2> x </h2></div>
-        
-                    <!-- Long Keys -->
-                    <div class="resetkey3"><h3>RESET</h3></div>
-                    <div class="equalskey3"><h1>=</h1></div>                            
-    </div>
-    </div>
-   </div> 
-</div> 
-   <script>
-
-
-   </script>
+    // Initialize theme on load
+    handleInputChange();
+</script>
 </body>
-<!--Design Styles Guide
-    Desktop size: 1440px
-    Mobile: 375px
-************************************************
-
----- TYPOGRAPHY -----
-* Fontsize: 32px
-* Font Weight: 700
-* Font Type(family): League Spartan
-**********************************************
--->
 </html>
