@@ -17,6 +17,7 @@ function changeTheme(themeName) {
     linkElement.setAttribute('data-theme', 'true');
     document.head.appendChild(linkElement);
 }
+
 changeTheme("colortheme1.css");
 
 themeToggleFirst.addEventListener("click", () => {
@@ -32,6 +33,9 @@ themeToggleSecond.addEventListener("click", () => {
 themeToggleThird.addEventListener("click", () => {
     changeTheme("colortheme3.css");
 });
+
+
+
 
 // build calculator
 document.addEventListener('DOMContentLoaded', function () {

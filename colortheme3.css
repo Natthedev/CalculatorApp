@@ -24,6 +24,7 @@
 }
 .screen {
     background:  hsl(268, 71%, 12%);
+    color: white;
 
 }
 .theme-toggle {

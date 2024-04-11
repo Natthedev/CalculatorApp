@@ -1,16 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
-  font-weight: 700;
-}
+
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 /* Desktop*/
 .container {
@@ -18,24 +12,32 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 40px;
+  margin: 42px;
 }
 /* calculator holder*/
 .calcflexible {
     display: flex;
     flex-direction: column;
-    width: 1283px;
-    height: 915px;
+    width: 1095px;
+    height: 860px;
     justify-content: flex-start;
     align-items: center;
+    margin: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
 /* Containers for title and themes*/
 .calcgivhead {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  position: initial;
+  flex-direction: column;
+  width: 70%;
+  height: 15%;
+  margin: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+
 }
 
 .calctype {
@@ -45,7 +47,29 @@ body {
 }
 
 .calctype h5 {
-  margin: 0 2em 0 0;
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+.themebodycount {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: center;
+  column-gap: 435px;
+  
+}
+.themenumberings {
+  content: "1, 2, 3";
+  position: relative;
+  display: flex;
+  word-spacing: 6px;
 }
 /* The slider to switch themes*/
 .theme-toggle {
@@ -54,7 +78,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  position: relative; 
+
 }
 
 .theme-toggle > input {
@@ -93,34 +117,26 @@ body {
 }
 
 /*no worko css... maybe handy later*/
-/*.theme-toggle::before {
-    content: "1 2 3";
+.theme-toggle::before {
     position: absolute;
     bottom: 25px;
-} */
+
+} 
+
 /* Theme 123 lables*/
-.themebodycount {
-  position: absolute;
-  top: 50px;
-  right: 500px;
-}
 
-.themebodycount ol {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-ol li {
-  padding: 4px;
-}
 /* Calc styles and grids*/
 .calcgriddy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-gap: 15px; 
   width: 650px;
-  height: 970px;
+  height: 820px;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  margin-top: 55px;
+
 }
 
 .keygriddy {
@@ -152,6 +168,9 @@ ol li {
   margin-right: 66px;
   padding: 10px;
   align-content: center;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
 }
 
 .span-two {
@@ -164,7 +183,7 @@ ol li {
   border-radius: 10px;
   padding: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
   word-wrap: break-word;
@@ -172,23 +191,47 @@ ol li {
   width: 647px;
   height: 153px;
   border-radius: 14px;
-  margin-bottom: 24px;
-  margin-top: 35px;
+  margin-bottom: 2px;
+  margin-top: 13px;
 }
 
 .screen .current-operand {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .calcgriddy {
-    grid-template-columns: 400px;
-    /* grid-template-rows: minmax(70px, auto) auto; */
-  }
+@media screen and (max-width: 775px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scale: 100%;
+   
 
-  .theme-1 .keygriddy {
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(6, 40px); */
-    grid-gap: 18px;
+  }
+  /* calculator holder*/
+  .calcflexible {
+      display: flex;
+      flex-direction: column;
+      width: 1095px;
+      height: 960px;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 30px;
+      padding-top: 20px;
+      scale: 80%;
+  }
+ .calcgivhead {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 15%;
+    margin: 1px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+    font-weight: 700;
+    scale: 80%;
+
   }
 }
