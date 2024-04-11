@@ -1,0 +1,66 @@
+/*
+     backgrounds 
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+  
+     keys 
+    --key-primary-background: hsl(225, 21%, 49%);
+    --key-primary-shadow: hsl(224, 28%, 35%);
+  
+    --key-accent: hsl(6, 63%, 50%);
+    --key-accent-shadow: hsl(6, 70%, 34%);
+  
+    --key-neutral: hsl(30, 25%, 89%);
+    --key-shadow-neutral: hsl(28, 16%, 65%);
+  
+     text 
+    --text-neutral: #fff;
+    --text: hsl(221, 14%, 31%);
+  */
+
+  /*ALL BASE KEYS ARE: Id= keys
+  DELETE KEY: id= Deleto
+  RESET KEY: id= res
+  EQUALS KEY: id= equal
+  */
+
+.calcflexible {
+    background: #33446C;
+}
+.screen {
+    background: #182034;
+
+}
+.theme-toggle {
+    background-color: hsl(223, 31%, 20%);
+}
+.keygriddy {
+    background-color: hsl(223, 31%, 20%);
+}
+.keygriddy > button {
+    background-color: #D9D9D9;
+    box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65) ;
+    color: hsl(221, 14%, 31%);
+}
+.calcgivhead {
+    color: hsl(0, 0%, 100%);
+}
+#res {
+   background-color: #637097; 
+   box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
+   color: white;
+}
+#equal {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 4px 4px 4px 0px hsl(6, 70%, 34%);
+    color: white;
+}
+#Deleto {
+    background-color: #637097;
+    box-shadow: 4px 4px 4px 0px rgba(64, 78, 114, 0.65);
+    color: white;
+}
+.checkmark  {
+    background-color: hsl(6, 63%, 50%);
+}

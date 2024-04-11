@@ -1,0 +1,60 @@
+
+    /* backgrounds 
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+  
+    /* keys
+    --key-primary-background: hsl(281, 89%, 26%);
+    --key-primary-shadow: hsl(285, 91%, 52%);
+  
+    --key-accent: hsl(176, 100%, 44%);
+    --key-accent-shadow: hsl(177, 92%, 70%);
+  
+    --key-neutral: hsl(268, 47%, 21%);
+    --key-shadow-neutral: hsl(290, 70%, 36%);
+  
+    /* text 
+    --text-neutral: hsl(52, 100%, 62%);
+    --text-accent: hsl(198, 20%, 13%);
+    --text: hsl(52, 100%, 62%);
+  */
+  .calcflexible {
+    background: hsl(268, 75%, 9%);
+}
+.screen {
+    background:  hsl(268, 71%, 12%);
+
+}
+.theme-toggle {
+    background-color: hsl(268, 70%, 17%);
+}
+.keygriddy {
+    background-color:  hsl(268, 71%, 12%);
+}
+.keygriddy > button {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 4px 4px 4px 0px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+.calcgivhead {
+    color: hsl(52, 100%, 62%);
+}
+#res {
+   background-color: hsl(281, 89%, 26%); 
+   box-shadow: 4px 4px 4px 0px hsl(285, 91%, 52%);
+   color: white;
+}
+#equal {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 4px 4px 4px 0px hsl(177, 92%, 70%);
+    color: hsl(268, 71%, 12%);
+}
+#Deleto {
+    background-color: hsl(281, 89%, 26%); 
+    box-shadow: 4px 4px 4px 0px hsl(285, 91%, 52%);
+    color: white;
+}
+.checkmark  {
+    background-color: hsl(176, 100%, 44%);
+}
