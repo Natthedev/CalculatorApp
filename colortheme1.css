@@ -1,36 +1,24 @@
-/*
-     backgrounds 
-    --main-background: hsl(222, 26%, 31%);
-    --toggle-keypad-background: hsl(223, 31%, 20%);
-    --screen-background: hsl(224, 36%, 15%);
-  
-     keys 
-    --key-primary-background: hsl(225, 21%, 49%);
-    --key-primary-shadow: hsl(224, 28%, 35%);
-  
-    --key-accent: hsl(6, 63%, 50%);
-    --key-accent-shadow: hsl(6, 70%, 34%);
-  
-    --key-neutral: hsl(30, 25%, 89%);
-    --key-shadow-neutral: hsl(28, 16%, 65%);
-  
-     text 
-    --text-neutral: #fff;
-    --text: hsl(221, 14%, 31%);
-  */
+
 
   /*ALL BASE KEYS ARE: Id= keys
   DELETE KEY: id= Deleto
   RESET KEY: id= res
   EQUALS KEY: id= equal
   */
-
+.container {
+    background:linear-gradient(hsl(224, 36%, 15%),hsl(221, 14%, 31%), hsl(223, 31%, 20%),hsl(6, 63%, 50%) );
+    height: 100%;
+    width: 100%;
+}
 .calcflexible {
     background: #33446C;
+    border-color: transparent;
 }
 .screen {
     background: #182034;
     color: #D9D9D9;
+    border-color: hsl(223, 31%, 20%);
+    border-style: inset;
 
 }
 .theme-toggle {
@@ -38,6 +26,9 @@
 }
 .keygriddy {
     background-color: hsl(223, 31%, 20%);
+    border-color:  #2e395c hsl(223, 33%, 34%);
+    border-style: outset;
+    border-width: 10pt;
 }
 .keygriddy > button {
     background-color: #D9D9D9;

@@ -1,29 +1,17 @@
 
-    /* backgrounds 
-    --main-background: hsl(0, 0%, 90%);
-    --toggle-keypad-background: hsl(0, 5%, 81%);
-    --screen-background: hsl(0, 0%, 93%);
-  
-    /* keys
-    --key-primary-background: hsl(185, 42%, 37%);
-    --key-primary-shadow: hsl(185, 58%, 25%);
-  
-    --key-accent: hsl(25, 98%, 40%);
-    --key-accent-shadow: hsl(25, 99%, 27%);
-  
-    --key-neutral: hsl(45, 7%, 89%);
-    --key-shadow-neutral: hsl(35, 11%, 61%);
-  
-    /* text 
-    --text-neutral: hsl(60, 10%, 19%);
-    --text: hsl(60, 10%, 19%);
-    */
-  
+.container{
+   background: linear-gradient(hsl(185, 58%, 25%), hsl(35, 11%, 61%), hsl(25, 98%, 40%) ); 
+
+} 
 .calcflexible {
     background: hsl(0, 0%, 90%);
+    border-color: transparent;
+
 }
 .screen {
     background:  hsl(0, 0%, 94%);
+    border-color: hsl(34, 12%, 62%);
+    border-style: inset;
 
 }
 .theme-toggle {
@@ -31,6 +19,9 @@
 }
 .keygriddy {
     background-color:  hsl(0, 5%, 81%);
+    border-color: hsl(34, 12%, 62%) hsl(0, 5%, 71%);;
+    border-style: outset;
+    border-width: 5px;
 }
 .keygriddy > button {
     background-color: hsl(45, 7%, 89%);

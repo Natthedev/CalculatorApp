@@ -19,12 +19,19 @@
     --text-accent: hsl(198, 20%, 13%);
     --text: hsl(52, 100%, 62%);
   */
+  .container{
+    background: linear-gradient(hsl(268, 75%, 9%), hsl(268, 70%, 17%), hsl(290, 70%, 36%));
+  }
   .calcflexible {
     background: hsl(268, 75%, 9%);
+    border-color: hsl(268, 89%, 48%);
+    border-style: double;
 }
 .screen {
     background:  hsl(268, 71%, 12%);
     color: white;
+    border-color: hsl(268, 89%, 48%);
+    border-style: outset;
 
 }
 .theme-toggle {
@@ -32,6 +39,8 @@
 }
 .keygriddy {
     background-color:  hsl(268, 71%, 12%);
+    border-color: hsl(268, 89%, 48%);
+    border-style: inset;
 }
 .keygriddy > button {
     background-color: hsl(268, 47%, 21%);
