@@ -28,7 +28,7 @@ Your users should be able to:
 ![active-states-theme-1](https://github.com/Natthedev/CalculatorApp/assets/160279360/13906133-54ed-4c1b-8c4b-7998cf8219cc)
 ![active-states-theme-2](https://github.com/Natthedev/CalculatorApp/assets/160279360/83bb1e85-8960-408a-b502-dbf0522f6146)
 ![active-states-theme-3](https://github.com/Natthedev/CalculatorApp/assets/160279360/8e3b7cb7-5238-4630-90f1-40054084c8cb)
--- Desktop preview image of example demo deigns:
+-- Desktop preview image of example demo designs:
   ![desktop-preview](https://github.com/Natthedev/CalculatorApp/assets/160279360/b7aac2e9-020e-4cbb-805e-fb82f68e8217)
 -----------------------------------------------------------------------------------------------------------------------------------
 ### ----My final design----
