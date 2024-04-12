@@ -34,13 +34,16 @@ Your users should be able to:
 ### ----My final design----
 -Link to finished design: (https://calculator-app-zeta-lemon.vercel.app/) 
 --Screenshots:
+
 ![Theme1 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/c872569e-f0e7-4565-a2fa-7ffa0fc0abd0)
 ![Theme2 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/2c1d6409-ec55-49a4-8c87-3d69a6702fcb)
 ![Theme3 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/41a8e1ee-2257-4dc4-9d12-25414254c609)
 ---Screenshots of the calculator functioning:
+
 ![Calculating ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/a2d5b479-6155-4963-bf81-57020fd9fb8b)
 ![Sum of calculating](https://github.com/Natthedev/CalculatorApp/assets/160279360/e176a181-508d-492b-abbe-9d3e8942ff03)
 ---- Mobile View:
+
 ![Mobile-Theme1 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/684d2fef-5b33-427a-a1df-d3919c28cac7)
 ![Mobile-Theme2 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/95557413-b165-48db-aa94-3549446cf679)
 ![Mobile-Theme3 ss](https://github.com/Natthedev/CalculatorApp/assets/160279360/59f835c8-dac3-4890-8c85-511be3e8d799)
