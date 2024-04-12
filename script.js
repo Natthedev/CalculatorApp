@@ -1,41 +1,41 @@
-const themeToggleFirst = document.querySelector('#first');
-const themeToggleSecond = document.querySelector('#second');
-const themeToggleThird = document.querySelector('#third');
+
+document.addEventListener("DOMContentLoaded", function() {
+  const themeTogglefirst = document.querySelector('#first');
+  const themeTogglesecond = document.querySelector('#second');
+  const themeTogglethird = document.querySelector('#third');
 
 
 
-function changeTheme(themeName) {
-    const themeStylesheets = document.querySelectorAll('link[data-theme]');
-    themeStylesheets.forEach((stylesheet) => {
-        stylesheet.remove();
-    });
+  function changeTheme(themeName) {
+      const themeStylesheets = document.querySelectorAll('link[data-theme]');
+      themeStylesheets.forEach((stylesheet) => {
+          stylesheet.remove();
+      });
 
 
-    const linkElement = document.createElement('link');
-    linkElement.setAttribute('rel', 'stylesheet');
-    linkElement.setAttribute('href', themeName);
-    linkElement.setAttribute('data-theme', 'true');
-    document.head.appendChild(linkElement);
-}
+      const linkElement = document.createElement('link');
+      linkElement.setAttribute('rel', 'stylesheet');
+      linkElement.setAttribute('href', themeName);
+      linkElement.setAttribute('data-theme', 'true');
+      document.head.appendChild(linkElement);
+  }
 
-changeTheme("colortheme1.css");
-
-
-themeToggleFirst.addEventListener("click", () => {
-    changeTheme("colortheme1.css");
-});
+  themeTogglefirst.addEventListener("click", () => {
+      changeTheme("colortheme1.css");
+  });
 
 
-themeToggleSecond.addEventListener("click", () => {
-    changeTheme("colortheme2.css");
-});
+  themeTogglesecond.addEventListener("click", () => {
+      changeTheme("colortheme2.css");
+  });
 
 
-themeToggleThird.addEventListener("click", () => {
-    changeTheme("colortheme3.css");
-});
+  themeTogglethird.addEventListener("click", () => {
+      changeTheme("colortheme3.css");
+  });
 
-
+  changeTheme("colortheme1.css");
+});  
 //spent 4 days trying to make it save the theme to localstorage. If I continue ill either have a stroke, or go on a rampage.  
 // I do not care enough to continue trying to save it to localstorage or cookies or anything else. It is for my own wellbeing and everyone elses that they just act like its here.
 
