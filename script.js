@@ -21,20 +21,20 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   themeTogglefirst.addEventListener("click", () => {
-      changeTheme("colortheme1.css");
+      changeTheme("/calcappstyles/colortheme1.css");
   });
 
 
   themeTogglesecond.addEventListener("click", () => {
-      changeTheme("colortheme2.css");
+      changeTheme("/calcappstyles/colortheme2.css");
   });
 
 
   themeTogglethird.addEventListener("click", () => {
-      changeTheme("colortheme3.css");
+      changeTheme("/calcappstyles/colortheme3.css");
   });
 
-  changeTheme("colortheme1.css");
+  changeTheme("/calcappstyles/colortheme1.css");
 });  
 //spent 4 days trying to make it save the theme to localstorage. If I continue ill either have a stroke, or go on a rampage.  
 // I do not care enough to continue trying to save it to localstorage or cookies or anything else. It is for my own wellbeing and everyone elses that they just act like its here.
